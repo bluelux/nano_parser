@@ -7,7 +7,7 @@
 #define MAX_TOKEN_SIZE 10
 
 /* Number of digits the input number can receive */
-#define MAX_NUMBER_SIZE 3
+#define MAX_NUMBER_SIZE 4
 
 /* ASCII decimal of the delimiter token */
 #define DELIMITER_TOKEN 13
@@ -31,15 +31,13 @@ static Commands commands;
 int empty_index = 0;
 
 
-
-
 /*
  * Receives a string, extracts command token and number parameter and
  * tries to match with already registered commands.
  *
  */
-void process_input(char* buffer, int buffer_length)
-{                                
+void process_input(const char* buffer, int buffer_length)
+{                       
     //array of temp_token to compare to stored tokens
     char temp_token[MAX_TOKEN_SIZE];
     
@@ -155,7 +153,7 @@ void process_input(char* buffer, int buffer_length)
 };
 
 /*
- * Register commands is a function that stores tokens and callbacks in
+ * Register commands is a function that stores tokens and function callbacks in
  * a command list to parse and execute commands received in strings,
  * usually from a serial terminal console.
  * 

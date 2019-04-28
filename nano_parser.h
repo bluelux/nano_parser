@@ -32,7 +32,7 @@ int register_command(const char* token, int token_length, void (*function_addres
  * (char:DELIMITER_TOKEN)
  *
  */
-void process_input(char* buffer, int buffer_length);
+void process_input(const char* buffer, int buffer_length);
 
 
 #endif /* __NANO_PARSER_H__ */
