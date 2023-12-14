@@ -98,7 +98,7 @@ void process_input(const char* buffer, int buffer_length)
         if(buffer[j] == DELIMITER_TOKEN){
             int k,l = 0;
                         
-            //If it have digits, we need to represent as
+            //If it has digits, we need to represent as
             //an integer to pass to the callback function
             if(number_index>0){
                 number = 0;            
